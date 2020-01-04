@@ -1,0 +1,38 @@
+@mixin font-face($name, $file) {
+  @font-face {
+    font-family: "#{$name}";
+    src: url("../fonts/#{$file}.eot");
+    src: url("../fonts/#{$file}.eot?#iefix") format("embedded-opentype"),
+      url("../fonts/#{$file}.woff") format("woff"),
+      url("../fonts/#{$file}.ttf") format("truetype"),
+      url("../fonts/#{$file}.otf"),
+      url("../fonts/#{$file}.svg?#webfont") format("svg");
+  }
+}
+@include font-face("NotoSerif-Regular", NotoSerif-Regular);
+@include font-face("Gilroy-ExtraBold", Gilroy-ExtraBold);
+@include font-face("Gilroy-Light", Gilroy-Light);
+@include font-face("NotoSerif-LightItalic", NotoSerif-LightItalic);
+@include font-face("NotoSerif-Light", NotoSerif-Light);
+@include font-face("NotoSerif-Italic", NotoSerif-Italic);
+.notoSerif {
+  font-family: "NotoSerif-Regular";
+}
+.Gilroy-ExtraBold {
+  font-family: "Gilroy-ExtraBold";
+}
+.halvetica-bold {
+  font-family: "HelveticaNeueOneCaps-Bold";
+}
+.NotoSerif-LightItalic {
+  font-family: "NotoSerif-LightItalic";
+}
+.Gilroy-Light {
+  font-family: "Gilroy-Light";
+}
+.NotoSerif-Light {
+  font-family: "NotoSerif-Light";
+}
+.NotoSerif-Italic{
+  font-family: "NotoSerif-Italic";
+}
