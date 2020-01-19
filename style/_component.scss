@@ -4,6 +4,46 @@
   justify-content: space-between;
   height: 100%;
   color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  .item-header {
+    align-items: flex-start;
+    position: relative;
+    .circle-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      border-radius: 27px;
+      overflow: hidden;
+      transition: all 0.2s ease;
+      .deal {
+        font-size: 14px;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.3s ease-in;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20px;
+        white-space: nowrap;
+      }
+      img {
+        position: absolute;
+        top: 50%;
+        right: 4px;
+        transform: translate(-50%, -50%);
+      }
+      &:hover {
+        width: 143px !important;
+        .deal {
+          opacity: 1;
+        }
+      }
+    }
+  }
   .name {
     font-size: 14px;
     text-decoration: underline;
@@ -111,6 +151,8 @@
   .wrapper.active {
     background-color: #fff;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    position: relative;
+    z-index: 10;
     .call-back-header {
       .phone,
       .call-back-text {
@@ -161,25 +203,135 @@
 }
 
 .page-path {
-  display:flex;
+  display: flex;
   align-items: center;
-  font-size:12px;
-  font-family: "NotoSerif-Italic"; 
+  font-size: 12px;
+  font-family: "NotoSerif-Italic";
   & > *:not(:last-child) {
-    margin-right:7px;
+    margin-right: 7px;
   }
-  color:#C6C6C6;
+  color: #c6c6c6;
   a {
-    color:#0030D0;
+    color: #0030d0;
   }
 }
 
 .custom-select {
+  position: relative;
+  img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    pointer-events: none;
+  }
   select {
-    height:50px;
-    width:160px;
-    border-radius:27px;
-    border:1px solid #E9E9E9;
-    outline:none;
+    height: 50px;
+    width: 160px;
+    border-radius: 27px;
+    border: 1px solid #e9e9e9;
+    outline: none;
+    padding: 0 20px;
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
+    appearance: none;
+    color: #707070;
+    font-size: 14px;
+    font-family: "Gilroy-Light";
+  }
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  &-button {
+    width: 54px;
+    height: 54px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #e3e3e3;
+    color: #9f9f9f;
+    font-size: 16px;
+    font-family: "Gilroy-ExtraBold";
+    transition: all 0.3s ease;
+
+    &.active {
+      background-color: #0030d0;
+      color: #fff;
+      border-color: #0030d0;
+    }
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+    &:hover {
+      border-color: transparent;
+      box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.16);
+    }
+  }
+}
+.blue-btn {
+  height: 49px;
+  padding: 0 26px;
+  background-color: #0030d0;
+  border: 5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 25px;
+  font-family: "Gilroy-Light";
+  font-size: 16px;
+  color: #fff;
+  display: inline-flex;
+  img {
+    margin-left: 30px;
+  }
+}
+.form-input {
+  margin-top: 22px;
+  label {
+    span {
+      color: #000;
+      font-size: 16px;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+    textarea {
+      padding: 15px;
+      transition: all 0.3s ease;
+      color: #000;
+      font-size: 16px;
+      border: 1px solid #d5d5d5;
+      border-radius: 10px;
+      outline: none;
+      resize: none;
+      display: block;
+      width: 100%;
+      margin-bottom: 22px;
+      &:focus {
+        border-color: #adadad;
+      }
+    }
+    .inner {
+      height: 60px;
+      input {
+        padding: 0 15px;
+        width: 100%;
+        height: 100%;
+        outline: none;
+        border: 1px solid #d5d5d5;
+        border-radius: 10px;
+        padding-right: 50px;
+        transition: all 0.3s ease;
+        color: #000;
+        font-size: 16px;
+        &:focus {
+          border-color: #adadad;
+        }
+      }
+
+      img,
+      svg {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+      }
+    }
   }
 }

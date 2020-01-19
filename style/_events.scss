@@ -1,0 +1,12 @@
+.events-grid {
+  .card-wrapper {
+    .name {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

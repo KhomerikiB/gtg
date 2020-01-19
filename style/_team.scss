@@ -1,0 +1,41 @@
+.ourteam-container {
+  .desc {
+    line-height: 25px;
+    color: #000;
+    font-size: 14px;
+  }
+  .ourteam-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-gap: 50px;
+    grid-row-gap: 38px;
+    margin-top: 57px;
+    .item {
+      display: flex;
+      align-items: center;
+      .imagebox {
+        min-width: 153px;
+        max-width: 153px;
+        height: 153px;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .info {
+        margin-left: 23px;
+        .name {
+          font-size: 25px;
+          margin-bottom: 10px;
+        }
+        .prof {
+          font-size: 16px;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.about-company {
+  .tours-header {
+    margin-bottom: 31px;
+  }
+  .content {
+    p {
+      font-size: 14px;
+      color: #000;
+      font-family: "NotoSerif-Regular";
+      line-height: 25px;
+    }
+    .inner-image {
+      width: 100%;
+      max-width: 428px;
+      margin: 30px 24px;
+      margin-left: 0;
+    }
+    .full-image {
+      margin: 42px 0;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .inner-title {
+      font-size: 20px;
+      margin-bottom: 7px;
+    }
+    .list {
+      font-family: "NotoSerif-Regular";
+    }
+    ul {
+      margin-bottom: 30px;
+      li {
+        font-size: 16px;
+        color: #ff6130;
+        line-height: 30px;
+        position: relative;
+        padding-left: 20px;
+        &::after {
+          width: 8px;
+          height: 8px;
+          position: absolute;
+          border-radius: 50%;
+          content: "";
+          left: 0;
+          top: 0%;
+          transform: translateY(150%);
+          background-color: #ff6130;
+        }
+      }
+    }
+  }
+  margin-bottom: 73px;
+}

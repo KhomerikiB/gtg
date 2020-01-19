@@ -91,8 +91,17 @@
         position: relative;
         border-radius: 10px;
         overflow: hidden;
-        padding: 30px 33px 37px 33px;
-
+        .card-wrapper {
+          padding: 37px 33px 37px 33px;
+        }
+        .bg-image {
+          transition: all 0.2s ease;
+        }
+        &:hover {
+          .bg-image {
+            transform: scale(1.1);
+          }
+        }
         .bg-image {
           position: absolute;
           top: 0;
